@@ -1,0 +1,10 @@
+pyyaml
+requests
+blessed
+fake_useragent
+PrettyTable
+numpy
+colorama
+jsonlines
+tqdm
+schedule

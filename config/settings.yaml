@@ -1,0 +1,56 @@
+users:
+  djw: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsZyIsInRlbmFudENvZGUiOiJjcXUiLCJleHAiOjE3MTQzNzkwNjAsInVzZXJJZCI6IjE3Njg0Nzg3NTg1MTc0NzMyODIiLCJpYXQiOjE3MTM3NzQyNjAsInVzZXJuYW1lIjoi6JGj5L-K5LyfIn0.AlV-LHkn9FTOB27VhNZB7p_m0R6NAjhXVwCjTw6Slak
+  xxf: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsZyIsInRlbmFudENvZGUiOiJjcXUiLCJleHAiOjE3MTQ0OTI0MjksInVzZXJJZCI6IjE3NjgxODUzNTIzMTg3NDY2MjYiLCJpYXQiOjE3MTM4ODc2MjksInVzZXJuYW1lIjoi5b6Q6ZSh5bOwIn0.8-NkzcA-_EnHZaXDmKaykJwKtSRwF8oWo86KA2xSBJA
+route:
+  user:
+    url: http://huxispce.cqu.edu.cn/api/weixin/auth/login
+    type: post
+  book:
+    url: http://huxispce.cqu.edu.cn/api/field/wechat/fieldReserve/createFieldReserveOrder
+    type: post
+    body:
+      cardId: null
+      fieldAreaId: 1704745389682458625
+      itemId: "1"
+      orderDate: "2024-04-16"
+      orderDetailList:
+        - beginDate: 2024-04-16
+          beginTime: "21:00:00"
+          endDate: "2024-04-16"
+          endTime: "22:00:00"
+          fieldId: "1706485299959431169"
+          priceOrig: 12
+          pricePay: 12
+      orderType: R
+      priceOrig: 12
+      pricePay: 12
+      saleMode: F
+      venueId: 1704736567056269314
+      voucherNos:
+        - null
+    return_field: success, data.orderId # return key
+  display:
+    url: http://huxispce.cqu.edu.cn/api/field/wechat/fieldReserve/getFieldReserveDisplayData
+    type: get
+    settings:
+      time_diff_threshold: 2 # time difference between local time and target time in days
+
+    body:
+      venueId: 1704736567056269314
+      areaId: 1704745389682458625
+      queryDate: 2024-04-15
+      isVirtual: F
+  cancel:
+    url: http://huxispce.cqu.edu.cn/api/weixin/myOrder/cancelOrder
+    type: get
+    body:
+      orderId: null
+email:
+  # email_smtp_server: smtp.gmail.com
+  # email_smtp_port: 587
+  # email_smtp_username: jobecini@gmail.com
+  # email_smtp_password: adcoyigwroywrqdn
+  email_smtp_server: smtp.qq.com
+  email_smtp_port: 587
+  email_smtp_username: 1169394593@qq.com
+  email_smtp_password: folkkxguhohgbaca
