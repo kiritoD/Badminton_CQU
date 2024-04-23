@@ -1,6 +1,5 @@
 users:
-  djw: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsZyIsInRlbmFudENvZGUiOiJjcXUiLCJleHAiOjE3MTQzNzkwNjAsInVzZXJJZCI6IjE3Njg0Nzg3NTg1MTc0NzMyODIiLCJpYXQiOjE3MTM3NzQyNjAsInVzZXJuYW1lIjoi6JGj5L-K5LyfIn0.AlV-LHkn9FTOB27VhNZB7p_m0R6NAjhXVwCjTw6Slak
-  xxf: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsZyIsInRlbmFudENvZGUiOiJjcXUiLCJleHAiOjE3MTQ0OTI0MjksInVzZXJJZCI6IjE3NjgxODUzNTIzMTg3NDY2MjYiLCJpYXQiOjE3MTM4ODc2MjksInVzZXJuYW1lIjoi5b6Q6ZSh5bOwIn0.8-NkzcA-_EnHZaXDmKaykJwKtSRwF8oWo86KA2xSBJA
+  - xxx
 route:
   user:
     url: http://huxispce.cqu.edu.cn/api/weixin/auth/login
@@ -12,11 +11,11 @@ route:
       cardId: null
       fieldAreaId: 1704745389682458625
       itemId: "1"
-      orderDate: "2024-04-16"
+      orderDate: "2024-04-23"
       orderDetailList:
-        - beginDate: 2024-04-16
+        - beginDate: 2024-04-23
           beginTime: "21:00:00"
-          endDate: "2024-04-16"
+          endDate: "2024-04-23"
           endTime: "22:00:00"
           fieldId: "1706485299959431169"
           priceOrig: 12
@@ -46,11 +45,7 @@ route:
     body:
       orderId: null
 email:
-  # email_smtp_server: smtp.gmail.com
-  # email_smtp_port: 587
-  # email_smtp_username: jobecini@gmail.com
-  # email_smtp_password: adcoyigwroywrqdn
   email_smtp_server: smtp.qq.com
   email_smtp_port: 587
-  email_smtp_username: 1169394593@qq.com
-  email_smtp_password: folkkxguhohgbaca
+  email_smtp_username: xxx@qq.com
+  email_smtp_password: password
