@@ -1,5 +1,5 @@
 users:
-  - xxx
+  name: xxx
 route:
   user:
     url: http://huxispce.cqu.edu.cn/api/weixin/auth/login
@@ -37,7 +37,7 @@ route:
     body:
       venueId: 1704736567056269314
       areaId: 1704745389682458625
-      queryDate: 2024-04-15
+      queryDate: 2024-04-23
       isVirtual: F
   cancel:
     url: http://huxispce.cqu.edu.cn/api/weixin/myOrder/cancelOrder

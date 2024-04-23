@@ -25,7 +25,7 @@ def order_data(date: str, order_ids: List[int], data: Dict):
     Parameters
     ----------
     date : str
-        the date of the booking, for example "2024-04-15"
+        the date of the booking, for example "2024-04-23"
     order_ids : List[int]
         the order ids of the booking, for example [1]
     data : List[int]

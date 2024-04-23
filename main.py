@@ -47,9 +47,9 @@ def main(MP):
 获取`Lg-Authorization`码的方式：在 https://sso.cqu.edu.cn/login网站上登录你的账号，然后F12，随便找一个请求，
 在请求头里面找到`Lg-Authorization`字段，将该字段copy，然后填到settings.yaml中的users下面即可，参照示例：
 users:
-    -xxx
-    -yyy
-    -mmm
+    xxx: La-Au...
+    yyy: La-Au...
+    mmm: La-Au...
 Attention:
     1. 如果你在其他地方登陆过你的账号，那么你可能需要重新填一下你的`Lg-Authorization`码
     2. 为了安全，不调用系统命令创建定时任务，因此程序只要结束，所有子进程全部杀死

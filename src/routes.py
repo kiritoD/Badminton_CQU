@@ -42,7 +42,7 @@ class Router:
         Parameters
         ----------
         date : Union[None, str], optional
-            the query date, such as "2024-04-15" ,by default None
+            the query date, such as "2024-04-23" ,by default None
         """
 
         def time_diff(t1, t2):
