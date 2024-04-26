@@ -36,6 +36,7 @@ def order_data(date: str, order_ids: List[int], data: Dict):
     Dict
         _description_
     """
+    order_ids = list(map(str, order_ids))
     book_data = {"orderDate": date, "orderDetailList": [], "voucherNos": []}
     for order_id in order_ids:
         data_temp = data[order_id]

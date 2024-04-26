@@ -73,7 +73,7 @@ Attention:
     users = list(Config_Settings["users"].values())
     user_length = len(users)
     text_format(
-        f"你提供了{Fore.RED}{user_length}{Fore.WHITE}个账号，最多抢{Fore.RED}{user_length}{Fore.WHITE}个场地！"
+        f"你提供了{Fore.RED}{user_length}{Fore.WHITE}个账号，最多抢{Fore.RED}{user_length}{Fore.WHITE}个场地{Fore.RED}{user_length * 2}{Fore.WHITE}个小时！"
     )
 
     # date part
@@ -110,14 +110,16 @@ Attention:
     while True:
         try:
             text_format(
-                f"请输入你想抢的场地号码(0-{len(data_sorted_dict)}, 如果是多个场地请用,隔开).",
+                f"请输入你想抢的场地号码(0-{len(data_sorted_dict)}, 多个账号用`,`隔开，如果要抢多个小时用`-`隔开(e.g., 1, 3-4). Attention: 一个场地俩小时，不能俩小时俩场地！这个没做检查，乱输入我不管...",
                 "GREEN",
             )
             counter += 1
             ids = input("请输入: ")
             counter += 1
-            ids_ = ids.split(",")
-            ids_ = list(map(lambda x: int(x.strip()), ids_))
+            ids_ = []
+            for id_arr_str in ids.split(","):
+                ids_.append(list(map(int, id_arr_str.strip().split("-"))))
+            # ids_ = list(map(lambda x: int(x.strip()), ids_))
             if len(ids_) > user_length:
                 text_format("人数超了!", "RED")
                 counter += 1
@@ -168,7 +170,7 @@ Attention:
     results = []
     for id_, La_A in zip(ids_, users[: len(ids_)]):
         text_format(f"正在为场地{id_}创建任务", "BLUE")
-        book_data = order_data(date, [str(id_)], data_sorted_dict)
+        book_data = order_data(date, id_, data_sorted_dict)
         result = schedule_task(
             MP, Router_Badminton.book, email_url, time_, send_email, book_data, La_A
         )
