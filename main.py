@@ -28,7 +28,7 @@ send_email = partial(
 
 
 UA = UserAgent()
-token = Router.login(None, None)
+token = list(Config_Settings["users"].values())[0]
 Header = {
     "Lg-Authorization": token,
     "User-Agent": UA.random,
@@ -44,7 +44,7 @@ def text_format(text, color="WHITE"):
 def main(MP):
 
     prompt = """请先在./config/settings.yaml中将你的`Lg-Authorization`码放进去, 数量要>=你要抢的场地数量，否则失败...
-获取`Lg-Authorization`码的方式：在 https://sso.cqu.edu.cn/login网站上登录你的账号，然后F12，随便找一个请求，
+获取`Lg-Authorization`码的方式：在 http://huxispce.cqu.edu.cn/pages/fieldReservation/网站上登录你的账号，然后F12，随便找一个请求，
 在请求头里面找到`Lg-Authorization`字段，将该字段copy，然后填到settings.yaml中的users下面即可，参照示例：
 users:
     xxx: La-Au...

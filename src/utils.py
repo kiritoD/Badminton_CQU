@@ -14,6 +14,7 @@ from prettytable import PrettyTable
 from tqdm import tqdm
 
 from .config import LOGGER_CONFIG, load_yaml
+from .default import Default_DATA
 
 Default_DATA_PATH = os.path.join(os.path.dirname(__file__), "default_data.jsonl")
 
@@ -103,8 +104,8 @@ def jsonl_write(path: str, data: List[Dict]):
 def list_badminton_info(date: str, data: Union[Dict, None] = None):
     """list all badminton information"""
     if not data:
-        global Default_DATA_PATH
-        data = jsonl_read(Default_DATA_PATH)
+        global Default_DATA
+        data = Default_DATA
     data_sorted = sorted(data, key=lambda x: int(x["x"] * 100 + x["y"]))
     data_sorted_dict = {f"{_}": item for _, item in enumerate(data_sorted)}
     fields_x = sorted(set([_["field_name"] for _ in data_sorted]))
