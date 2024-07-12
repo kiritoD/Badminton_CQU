@@ -13,15 +13,7 @@ pip install -r requirements.txt
 ```
 python main.py
 ```
-## Features
-
-#### 2024-04-23
-- [x] regular venue booking
-- [x] terminal gui
-- [x] email notification
-#### 2024-04-21
-- [x] start
-#### settings.yaml
+## config/settings.yaml
 
 ```yaml
 users:
@@ -76,3 +68,12 @@ email:
   email_smtp_username: xxx@qq.com
   email_smtp_password: xxx
 ```
+
+## Features
+
+#### 2024-04-23
+- [x] regular venue booking
+- [x] terminal gui
+- [x] email notification
+#### 2024-04-21
+- [x] start
